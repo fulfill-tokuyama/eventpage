@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="次世代リーダーのための実践型ビジネスセミナー。成功する起業家の思考法を、たった1日で手に入れる。">
+    <meta name="keywords" content="ビジネスセミナー, 起業家, リーダーシップ, マーケティング, 組織開発">
+    <meta property="og:title" content="NEXT LEVEL - 次世代リーダーのための実践型ビジネスセミナー">
+    <meta property="og:description" content="成功する起業家の思考法を、たった1日で手に入れる。100名限定・満席必至の人気セミナー">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/next-level">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>NEXT LEVEL - 次世代リーダーのための実践型ビジネスセミナー</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <!-- ヒーローセクション -->
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">成功する起業家の思考法を、<br>たった1日で手に入れる</h1>
-            <p class="sub-copy" data-aos="fade-up" data-aos-delay="200">100名限定・満席必至の人気セミナー</p>
-            <div class="event-info" data-aos="fade-up" data-aos-delay="400">
-                <p>2025年7月20日（土）10:00-18:00</p>
-                <p>東京国際フォーラム ホールB</p>
+            <div class="hero-content">
+                <h1 data-aos="fade-up">成功する起業家の思考法を、<br>たった1日で手に入れる</h1>
+                <p class="sub-copy" data-aos="fade-up" data-aos-delay="200">100名限定・満席必至の人気セミナー</p>
+                <div class="event-info" data-aos="fade-up" data-aos-delay="400">
+                    <div class="event-date">
+                        <span class="date-icon">📅</span>
+                        <p>2025年7月20日（土）10:00-18:00</p>
+                    </div>
+                    <div class="event-location">
+                        <span class="location-icon">📍</span>
+                        <p>東京国際フォーラム ホールB</p>
+                    </div>
+                </div>
+                <div class="countdown" data-aos="fade-up" data-aos-delay="600">
+                    <p>早割終了まで</p>
+                    <div id="timer" class="timer"></div>
+                </div>
+                <a href="#apply" class="cta-button" data-aos="fade-up" data-aos-delay="800">
+                    <span>今すぐ席を確保する</span>
+                    <span class="arrow">→</span>
+                </a>
             </div>
-            <div class="countdown" data-aos="fade-up" data-aos-delay="600">
-                <p>早割終了まで</p>
-                <div id="timer"></div>
-            </div>
-            <a href="#apply" class="cta-button" data-aos="fade-up" data-aos-delay="800">今すぐ席を確保する</a>
         </div>
     </section>
 
@@ -134,45 +154,63 @@
             <h2 data-aos="fade-up">料金・申込</h2>
             <div class="pricing-cards" data-aos="fade-up" data-aos-delay="200">
                 <div class="pricing-card early-bird">
-                    <h3>早割</h3>
-                    <div class="price">¥15,000</div>
-                    <p>6月30日まで</p>
-                    <ul>
-                        <li>セミナー参加権</li>
-                        <li>講義資料</li>
-                        <li>懇親会参加</li>
+                    <div class="pricing-badge">早割</div>
+                    <h3>早割プラン</h3>
+                    <div class="price">
+                        <span class="original-price">¥20,000</span>
+                        <span class="discount-price">¥15,000</span>
+                    </div>
+                    <p class="pricing-period">6月30日まで</p>
+                    <ul class="pricing-features">
+                        <li>✓ セミナー参加権</li>
+                        <li>✓ 講義資料</li>
+                        <li>✓ 懇親会参加</li>
+                        <li>✓ 特典：講師との個別相談（15分）</li>
                     </ul>
                 </div>
                 <div class="pricing-card regular">
-                    <h3>通常</h3>
-                    <div class="price">¥20,000</div>
-                    <p>7月1日以降</p>
-                    <ul>
-                        <li>セミナー参加権</li>
-                        <li>講義資料</li>
-                        <li>懇親会参加</li>
+                    <h3>通常プラン</h3>
+                    <div class="price">
+                        <span class="regular-price">¥20,000</span>
+                    </div>
+                    <p class="pricing-period">7月1日以降</p>
+                    <ul class="pricing-features">
+                        <li>✓ セミナー参加権</li>
+                        <li>✓ 講義資料</li>
+                        <li>✓ 懇親会参加</li>
                     </ul>
                 </div>
             </div>
             <div class="apply-form" data-aos="fade-up" data-aos-delay="400">
                 <form>
                     <div class="form-group">
-                        <label for="name">お名前</label>
-                        <input type="text" id="name" required>
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="山田 太郎">
                     </div>
                     <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" required>
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
                     </div>
                     <div class="form-group">
-                        <label for="company">会社名</label>
-                        <input type="text" id="company" required>
+                        <label for="company">会社名 <span class="required">*</span></label>
+                        <input type="text" id="company" name="company" required placeholder="株式会社〇〇">
                     </div>
                     <div class="form-group">
-                        <label for="position">役職</label>
-                        <input type="text" id="position" required>
+                        <label for="position">役職 <span class="required">*</span></label>
+                        <input type="text" id="position" name="position" required placeholder="代表取締役">
                     </div>
-                    <button type="submit" class="cta-button">申し込む</button>
+                    <div class="form-group">
+                        <label for="message">ご質問・ご要望</label>
+                        <textarea id="message" name="message" rows="4" placeholder="ご質問やご要望がございましたら、ご記入ください。"></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">プライバシーポリシーに同意する <span class="required">*</span></label>
+                    </div>
+                    <button type="submit" class="cta-button">
+                        <span>申し込む</span>
+                        <span class="arrow">→</span>
+                    </button>
                 </form>
                 <p class="security-note">※SSL暗号化通信により、入力情報は安全に保護されます</p>
             </div>
@@ -232,7 +270,33 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 NEXT LEVEL Business Seminar. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>NEXT LEVEL</h3>
+                    <p>次世代リーダーのための実践型ビジネスセミナー</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>セミナー情報</h4>
+                        <ul>
+                            <li><a href="#schedule">スケジュール</a></li>
+                            <li><a href="#speakers">講師紹介</a></li>
+                            <li><a href="#pricing">料金・申込</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>会社情報</h4>
+                        <ul>
+                            <li><a href="#">会社概要</a></li>
+                            <li><a href="#">プライバシーポリシー</a></li>
+                            <li><a href="#">特定商取引法に基づく表記</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NEXT LEVEL Business Seminar. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
